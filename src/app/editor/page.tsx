@@ -5,6 +5,8 @@ import MainPanel from "@/containers/editor/panels/MainPanel";
 import SideNav from "@/containers/editor/sidenav";
 import { PricingOverlay } from "@/containers/pricing";
 
+export const runtime = 'edge';
+
 export default async function Page() {
   return (
     <TooltipProvider delayDuration={0}>

@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Script from "next/script";
-import { getCheckoutURL } from "@/app/actions";
 import LoadingButton from "@/components/LoadingButton";
 import { MessageKey } from "@/global";
 import type { SubscriptionType } from "@/lib/shop/types";
@@ -45,7 +44,7 @@ export function CtaButton({ tier: { plan, highlighted, cta } }: CtaButtonProps) 
     if (needPay && !needLogin) {
       try {
         const redirectUrl = `${window.location.origin}/editor`;
-        const checkoutUrl = await getCheckoutURL(plan, redirectUrl);
+        const checkoutUrl = undefined;
 
         if (checkoutUrl) {
           action = "open_checkout_url";

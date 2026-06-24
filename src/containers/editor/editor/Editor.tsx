@@ -35,7 +35,7 @@ export default function Editor({ kind, ...props }: EditorProps) {
         fontSize: 13, // 设置初始字体大小
         scrollBeyondLastLine: false, // 行数超过一屏时才展示滚动条
         automaticLayout: true, // 当编辑器所在的父容器的大小改变时，编辑器会自动重新计算并调整大小
-        wordWrap: "on",
+        wordWrap: "off",
         minimap: { enabled: false },
         stickyScroll: {
           enabled: true,

@@ -1,15 +1,18 @@
-import FAQ from "@/containers/landing/FAQ";
-import Features from "@/containers/landing/Features";
-import HeroTitle from "@/containers/landing/HeroTitle";
-import { Pricing } from "@/containers/pricing";
+import { Separator } from "@/components/ui/separator";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import MainPanel from "@/containers/editor/panels/MainPanel";
+import SideNav from "@/containers/editor/sidenav";
 
-export default function Index() {
+export default async function Page() {
   return (
-    <div className="relative flex flex-col items-center w-full h-full md:mx-32 mx-4 mb-48 space-y-24 text-center">
-      <HeroTitle />
-      <Features />
-      <Pricing />
-      <FAQ />
-    </div>
+    <TooltipProvider delayDuration={0}>
+      <div className="flex h-full w-full flex-col">
+        <div className="flex min-h-0 flex-1">
+          <SideNav />
+          <Separator orientation="vertical" />
+          <MainPanel />
+        </div>
+      </div>
+    </TooltipProvider>
   );
 }

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "@/components/icons/Logo";
 import { Separator } from "@/components/ui/separator";
-import { isCN, version } from "@/lib/env";
+import { version } from "@/lib/env";
 import { cn } from "@/lib/utils";
 import { useConfigFromCookies } from "@/stores/hook";
 import { useStatusStore } from "@/stores/statusStore";
@@ -19,7 +19,6 @@ import {
   AlignHorizontalJustifyCenter,
   ArrowLeftToLine,
   ArrowRightFromLine,
-  Bug,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useShallow } from "zustand/shallow";
@@ -132,12 +131,6 @@ export default function SideNav() {
         </ul>
         <ul className="flex flex-col px-1 gap-y-2">
           <LinkButton icon={<CircleHelp className="icon" />} title={t("Tutorial")} href={"/tutorial"} newWindow />
-          <LinkButton
-            icon={<Bug className="icon" />}
-            title={t("Feedback")}
-            href={isCN ? "https://support.qq.com/product/670462" : "https://github.com/loggerhead/json4u/issues/new"}
-            newWindow
-          />
           <Button
             className="my-1.5"
             icon={fixSideNav ? <ArrowRightFromLine className="icon" /> : <ArrowLeftToLine className="icon" />}

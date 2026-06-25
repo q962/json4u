@@ -14,6 +14,7 @@ import {
   Download,
   FileUp,
   CircleHelp,
+  Globe,
   Share2,
   SquareStack,
   AlignHorizontalJustifyCenter,
@@ -131,6 +132,8 @@ export default function SideNav() {
         </ul>
         <ul className="flex flex-col px-1 gap-y-2">
           <LinkButton icon={<CircleHelp className="icon" />} title={t("Tutorial")} href={"/tutorial"} newWindow />
+          <LinkButton icon={<Globe className="icon" />} title={t("OriginalProject")} href={"https://json4u.cn"} newWindow />
+          <LinkButton icon={<Globe className="icon" />} title={t("Fork")} href={"https://github.com/q962/json4u"} newWindow />
           <Button
             className="my-1.5"
             icon={fixSideNav ? <ArrowRightFromLine className="icon" /> : <ArrowLeftToLine className="icon" />}
